@@ -1,22 +1,17 @@
-# adityakiwi.github.io
+# aditya.kiwi
 
-Personal site and resume — live at **https://adityakiwi.github.io**
+Personal developer one-pager for Aditya Dixit.
 
-## Push to GitHub Pages
+## Deployment
 
-This repo is a GitHub Pages site. Pushing to the `main` branch updates the live site.
+This site is deployed via Cloudflare for `https://aditya.kiwi`.
 
-**Option 1 – Deploy script**
-```bash
-chmod +x deploy.sh
-./deploy.sh "Your commit message"
-```
+### Update flow
 
-**Option 2 – Git commands**
 ```bash
 git add -A
 git commit -m "Update site"
 git push origin main
 ```
 
-After pushing, the site usually updates within a minute or two.
+After pushing, Cloudflare picks up the latest build based on your project configuration.
