@@ -1,12 +1,12 @@
 /* --- Variables --- */
 :root {
-  --bg: #faf8f5;
-  --bg-section: #f3f0eb;
-  --text: #1c1917;
-  --text-muted: #57534e;
-  --accent: #c2410c;
-  --accent-soft: #fef3e8;
-  --border: #e7e5e4;
+  --bg: #0b1020;
+  --bg-section: #111936;
+  --text: #e6edf8;
+  --text-muted: #9eaacf;
+  --accent: #49b3ff;
+  --accent-soft: #182647;
+  --border: #24304f;
   --font-sans: "Outfit", system-ui, sans-serif;
   --font-serif: "Source Serif 4", Georgia, serif;
   --container: min(90vw, 720px);
@@ -24,6 +24,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
+  background-image: radial-gradient(circle at top, rgba(73, 179, 255, 0.12), transparent 40%);
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -34,7 +35,7 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 248, 245, 0.92);
+  background: rgba(11, 16, 32, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -52,6 +53,7 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--text);
+  letter-spacing: 0.02em;
 }
 .logo:hover { text-decoration: none; }
 .logo-kiwi { color: var(--accent); }
@@ -91,15 +93,25 @@ a:hover { text-decoration: underline; }
   text-align: center;
   max-width: var(--container);
   margin: 0 auto;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 1rem 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
 }
 
 .hero-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   color: var(--accent);
   font-weight: 600;
   margin-bottom: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .hero-title {
@@ -111,11 +123,11 @@ a:hover { text-decoration: underline; }
 .name { color: var(--accent); }
 
 .hero-tagline {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   color: var(--text-muted);
   margin: 0 0 1rem;
-  font-style: italic;
+  font-weight: 500;
 }
 
 .hero-bio {
@@ -144,12 +156,12 @@ a:hover { text-decoration: underline; }
 .btn:hover { text-decoration: none; }
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: #041021;
 }
 .btn-primary:hover {
-  background: #a63509;
+  background: #78c7ff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
+  box-shadow: 0 4px 14px rgba(73, 179, 255, 0.35);
 }
 .btn-secondary {
   background: var(--bg-section);
@@ -177,12 +189,12 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   margin: 0 0 1.5rem;
   color: var(--text);
+  letter-spacing: 0.01em;
 }
 
 /* --- Summary --- */
 .summary-text {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text);
   margin: 0;
@@ -196,7 +208,7 @@ a:hover { text-decoration: underline; }
 }
 .edu-item {
   padding: 1.5rem;
-  background: var(--bg);
+  background: rgba(11, 16, 32, 0.75);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -232,9 +244,11 @@ a:hover { text-decoration: underline; }
   padding: 0.4rem 0.9rem;
   background: var(--accent-soft);
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
   border-radius: 999px;
+  border: 1px solid var(--border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* --- Experience --- */
@@ -245,14 +259,14 @@ a:hover { text-decoration: underline; }
 }
 .exp-item {
   padding: 1.5rem;
-  background: var(--bg);
+  background: rgba(11, 16, 32, 0.75);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .exp-item:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 20px rgba(194, 65, 12, 0.08);
+  box-shadow: 0 6px 20px rgba(73, 179, 255, 0.14);
 }
 .exp-header {
   display: flex;
@@ -296,14 +310,14 @@ a:hover { text-decoration: underline; }
 
 .project-card {
   padding: 1.5rem;
-  background: var(--bg);
+  background: rgba(11, 16, 32, 0.75);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .project-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 20px rgba(194, 65, 12, 0.08);
+  box-shadow: 0 6px 20px rgba(73, 179, 255, 0.14);
 }
 
 .project-card h3 {
@@ -357,7 +371,7 @@ a:hover { text-decoration: underline; }
 }
 .topic-tags span {
   padding: 0.35rem 0.85rem;
-  background: var(--bg);
+  background: rgba(11, 16, 32, 0.85);
   border: 1px solid var(--border);
   border-radius: 999px;
   font-size: 0.9rem;
@@ -414,6 +428,7 @@ a:hover { text-decoration: underline; }
   padding: var(--space) 5vw;
   border-top: 1px solid var(--border);
   text-align: center;
+  background: rgba(11, 16, 32, 0.65);
 }
 .site-footer p {
   margin: 0;
@@ -421,6 +436,22 @@ a:hover { text-decoration: underline; }
   color: var(--text-muted);
 }
 .site-footer a { color: var(--text-muted); }
+
+/* --- Resume page --- */
+.resume-embed-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(11, 16, 32, 0.75);
+  min-height: 70vh;
+}
+
+.resume-embed {
+  width: 100%;
+  height: 80vh;
+  border: 0;
+  display: block;
+}
 
 /* --- Mobile nav --- */
 @media (max-width: 640px) {
