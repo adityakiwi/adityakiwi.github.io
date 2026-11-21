@@ -3,185 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya Dixit · aditya.kiwi</title>
-  <meta name="description" content="Aditya Dixit — software engineer and data scientist building AI-powered products, scalable systems, and production-grade developer tooling." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f5f8fc" />
+  <meta name="description" content="Aditya Dixit is a software engineer building dependable software and clinical AI systems." />
+  <title>Aditya Dixit — Software Engineer</title>
+  <script>try{const t=localStorage.getItem('site-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="nav">
-      <a href="#top" class="logo">aditya<span class="logo-kiwi">.kiwi</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="/resume.html">Resume</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Aditya Dixit, home">Aditya Dixit</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#work">Selected work</a></li><li><a href="#approach">Approach</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a class="resume-link" href="/resume.html">Resume <span aria-hidden="true">↗</span></a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-tools"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button><button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button></div>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="hero-label">Software Engineer · Data Science</p>
-      <h1 class="hero-title">I'm <span class="name">Aditya Dixit</span></h1>
-      <p class="hero-tagline">Building AI-powered products and scalable systems</p>
-      <p class="hero-bio">I design and ship production software across full-stack engineering, applied machine learning, and cloud infrastructure. My focus is turning complex data and workflows into reliable developer and user experiences.</p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-secondary">Work With Me</a>
+  <main id="main">
+    <section class="intro section-wrap" id="top">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Software engineer · Healthcare AI</p>
+        <h1>I build software for <em>complex, consequential</em> work.</h1>
+        <p class="intro-lede">Five years across infrastructure, platform engineering, full-stack products, and agentic AI. Today, I turn clinical workflows and research needs into dependable software.</p>
+        <div class="intro-actions"><a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↓</span></a><a class="text-link" href="/resume.html">View resume <span aria-hidden="true">↗</span></a><a class="text-link" href="https://adityadixit.com" target="_blank" rel="noopener">More about me <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <aside class="intro-note" aria-label="Career path">
+        <p class="note-label">A career in systems</p>
+        <ol class="path-list"><li>Infrastructure</li><li>Platform</li><li>Full-stack</li><li>Agentic AI</li><li class="path-current">Clinical software</li></ol>
+        <p class="note-foot">From reliable foundations to useful experiences.</p>
+      </aside>
+    </section>
+
+    <section class="section-wrap section-block" id="work">
+      <header class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2>Software built around real workflows.</h2></div><p class="section-summary">A small sample of clinical and research systems, described by what they do and how they are engineered.</p></header>
+      <div class="work-grid">
+        <article class="work-card work-featured"><div class="card-top"><span class="card-index">01</span><span class="card-type">Clinical decision support</span></div><h3>Pre-screening &amp; risk assessment</h3><p>A cancer pre-screening tool that combines published clinical guidelines with fitted statistical models to assess patients and return recommendations and risk tiers.</p><ul class="detail-list"><li>One shared prediction engine across web, iOS, Android tablet, desktop, kiosk, and admin clients.</li><li>Multi-stage screening, risk stratification, and imaging-informed decisions.</li><li>13 languages, offline capability, and accessibility review.</li></ul><div class="card-footer"><span>Cross-platform</span><span>Offline-ready</span><span>Localized</span></div></article>
+        <article class="work-card"><div class="card-top"><span class="card-index">02</span><span class="card-type">Clinical planning</span></div><h3>Surgical planning platform</h3><p>An interactive pre-operative planning tool that turns clinical data and imaging-derived variables into patient-specific insights.</p><ul class="detail-list"><li>3D visualization with data overlays and predictive outputs.</li><li>Printable operative summaries and a signed, auto-updating offline desktop build.</li></ul><div class="card-footer"><span>3D visualization</span><span>Desktop</span></div></article>
+        <article class="work-card"><div class="card-top"><span class="card-index">03</span><span class="card-type">Longitudinal care</span></div><h3>Clinical monitoring platform</h3><p>A care pathway that helps patients and clinicians follow change over time and stay aligned with a protocol.</p><ul class="detail-list"><li>Trend tracking, derived kinetics from serial labs, adherence, and scheduling.</li><li>AI chat limited to approved content, with topic and intent gates that abstain on unsafe requests.</li></ul><div class="card-footer"><span>Clinician + patient views</span><span>Guarded AI</span></div></article>
+        <article class="work-card"><div class="card-top"><span class="card-index">04</span><span class="card-type">Research infrastructure</span></div><h3>Consent-aware data systems</h3><p>HIPAA-conscious pipelines move consented study data from point-of-care capture into institutional research systems.</p><ul class="detail-list"><li>De-identification, consent gating, audit trails, and admin reconciliation.</li><li>Public education builds are architecturally separate and verified not to collect or transmit input.</li></ul><div class="card-footer"><span>Privacy by design</span><span>Research systems</span></div></article>
+        <article class="work-card"><div class="card-top"><span class="card-index">05</span><span class="card-type">AI infrastructure</span></div><h3>Model serving</h3><p>Self-hosted language, speech, and avatar inference served from institutional HPC and GPU nodes behind authenticated proxies.</p><div class="card-footer"><span>HPC / GPU</span><span>Authenticated services</span></div></article>
       </div>
     </section>
 
-    <section id="about" class="section summary">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="summary-text">I work at the intersection of software engineering and data science, with hands-on experience in React, TypeScript, Python, FastAPI, Kubernetes, and modern ML workflows. Across healthcare analytics, platform engineering, and internal tooling, I enjoy building systems that are technically robust, measurable, and practical for real teams.</p>
+    <section class="approach-section" id="approach"><div class="section-wrap section-block"><header class="section-heading"><div><p class="eyebrow">02 / Engineering approach</p><h2>Make the guarantees testable.</h2></div><p class="section-summary">In clinical software, reliability and privacy should be properties the system proves—not assumptions people have to remember.</p></header>
+      <div class="approach-grid">
+        <article class="principle"><span class="principle-number">A</span><div><h3>One engine, many clients</h3><p>Shared decision logic prevents separate apps from disagreeing. Conformance vectors and cross-implementation regression tests catch drift in ported copies.</p></div></article>
+        <article class="principle"><span class="principle-number">B</span><div><h3>Reproducible results</h3><p>Versioned engine and guideline identifiers make each stored result traceable to the logic that produced it.</p></div></article>
+        <article class="principle"><span class="principle-number">C</span><div><h3>Privacy that is verified</h3><p>For public builds that must never retain or send input, bundle scans check storage and network APIs; runtime assertions check for zero calls, with a canary test that proves the guard works.</p></div></article>
+        <article class="principle"><span class="principle-number">D</span><div><h3>Security through the lifecycle</h3><p>PHI separation, consent gates, server-side secrets, SSO, bot mitigation, continuous security scanning, end-to-end tests, and WCAG AA contrast checks.</p></div></article>
+      </div>
+      <div class="scale-strip"><p>Clinical work, roughly one year</p><div><strong>19</strong><span>production deployments</span></div><div><strong>5</strong><span>client platforms</span></div><div><strong>13</strong><span>locales</span></div><div><strong>30</strong><span>signed desktop releases</span></div></div>
+    </div></section>
+
+    <section class="section-wrap section-block" id="experience"><header class="section-heading"><div><p class="eyebrow">03 / Experience</p><h2>Across the stack, in sequence.</h2></div><p class="section-summary">A progression from systems and reliability work toward software for clinical research and care.</p></header>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">Jan 2026 — Present</div><div class="timeline-body"><p class="timeline-company">Icahn School of Medicine at Mount Sinai</p><h3>Data Science Analyst, Healthcare AI</h3><ul><li>Builds and deploys clinical software across platforms, translating clinical workflows and research requirements into oncologic research and clinical decision-support tools.</li><li>Engineered HIPAA-compliant data infrastructure joining clinical data, imaging findings, and outcomes to support research and predictive modeling.</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">May 2025 — Jan 2026</div><div class="timeline-body"><p class="timeline-company">HCLTech</p><h3>Senior Software Engineer, Agentic AI</h3><ul><li>Integrated frontends with Python FastAPI backends and Azure AI endpoints for real-time enterprise workflows.</li><li>Designed React and TypeScript interfaces for chat, file uploads, and results dashboards.</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">Dec 2024 — May 2025</div><div class="timeline-body"><p class="timeline-company">Columbus International Corporation</p><h3>Software Engineer, Full Stack</h3><ul><li>Built a property management system from scratch with Flask, React, and PostgreSQL, including task assignment, ticketing, service requests, progress tracking, and maintenance alerts.</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">Aug 2024 — Oct 2024</div><div class="timeline-body"><p class="timeline-company">NIKSUN Inc</p><h3>Software Engineer, DevOps / Platform Infrastructure</h3><ul><li>Evaluated KubeVirt virtual machines and NVIDIA GPU nodes with ML optimizations on Kubernetes.</li><li>Optimized Jenkins and Docker delivery, cutting deployment time by about 50% for images and Debian packages.</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">Aug 2023 — Jul 2024</div><div class="timeline-body"><p class="timeline-company">American Business Solutions / NIKSUN Inc</p><h3>Software Engineer, SRE</h3><ul><li>Analyzed 15 hardware-level metrics with Pandas to improve infrastructure observability and troubleshooting.</li><li>Automated CPU, memory, and disk monitoring with Python Linux services, reducing system downtime by about 30%.</li></ul></div></article>
       </div>
     </section>
 
-    <section id="skills" class="section certifications">
-      <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="cert-tags">
-          <span>Python</span>
-          <span>TypeScript</span>
-          <span>React</span>
-          <span>FastAPI</span>
-          <span>Flask</span>
-          <span>PostgreSQL</span>
-          <span>Kubernetes</span>
-          <span>Docker</span>
-          <span>AWS</span>
-          <span>Prometheus</span>
-          <span>Grafana</span>
-          <span>CI/CD</span>
-          <span>LLM Applications</span>
-          <span>Machine Learning</span>
-        </div>
-      </div>
+    <section class="skills-section" id="skills"><div class="section-wrap section-block"><header class="section-heading"><div><p class="eyebrow">04 / Toolkit</p><h2>Technical skills</h2></div><p class="section-summary">Tools used across product engineering, applied modeling, and production infrastructure.</p></header>
+      <div class="skills-grid"><div class="skill-group"><h3>Languages</h3><p>Python, JavaScript, TypeScript, Swift, Dart, Kotlin, SQL, Bash, C/C++</p></div><div class="skill-group"><h3>Frameworks</h3><p>React, Node.js, FastAPI, Flask, Vite, SwiftUI, Jetpack Compose, Flutter</p></div><div class="skill-group"><h3>Data &amp; ML</h3><p>Pandas, statistical modeling, logistic regression, self-hosted LLM and TTS serving</p></div><div class="skill-group"><h3>Infrastructure</h3><p>Docker, Kubernetes, KubeVirt, Jenkins, GitHub Actions, Cloudflare Workers, Vercel, Firebase, Render, Turso/SQLite, PostgreSQL, Supabase, HPC/Slurm</p></div><div class="skill-group"><h3>Cloud</h3><p>AWS, Azure (including Azure AI), GCP</p></div><div class="skill-group"><h3>Practices</h3><p>CI/CD, SRE and observability, testing strategy, accessibility, security review, HIPAA-aware design</p></div></div>
+    </div></section>
+
+    <section class="section-wrap section-block education-section" id="education"><header class="section-heading"><div><p class="eyebrow">05 / Education</p><h2>Foundations in computer science.</h2></div><p class="section-summary">Systems coursework grounded in implementation, from memory management to scheduling.</p></header>
+      <div class="education-grid"><article><p class="education-degree">M.S. Computer Science</p><h3>New York University</h3><p>Courant Institute</p></article><article><p class="education-degree">B.S. Computer Science &amp; Economics</p><h3>University of San Francisco</h3><p>Cum Laude</p></article><article class="coursework"><p class="education-degree">Graduate systems coursework</p><h3>Built from the ground up</h3><p>Two-pass linkers, process and thread schedulers, virtual-memory managers, and I/O schedulers in C/C++.</p></article></div>
     </section>
 
-    <section id="experience" class="section experience">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="exp-list">
-          <article class="exp-item">
-            <div class="exp-header">
-              <h3 class="exp-role">Data Science Analyst</h3>
-              <span class="exp-company">Icahn School of Medicine, Mt Sinai</span>
-              <span class="exp-date">2026 – Present</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Building clinical ML pipelines combining imaging and structured patient data for real-time decision support.</li>
-              <li>Delivering analytics workflows that convert complex medical datasets into actionable outcomes.</li>
-            </ul>
-          </article>
-          <article class="exp-item">
-            <div class="exp-header">
-              <h3 class="exp-role">Senior Software Engineer</h3>
-              <span class="exp-company">HCL Tech</span>
-              <span class="exp-date">2025 – 2026</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Shipped React/TypeScript and FastAPI features for an agentic AI platform.</li>
-              <li>Built responsive interfaces for parsing-heavy workflows and real-time insight delivery.</li>
-            </ul>
-          </article>
-          <article class="exp-item">
-            <div class="exp-header">
-              <h3 class="exp-role">Site Reliability Engineer</h3>
-              <span class="exp-company">NIKSUN</span>
-              <span class="exp-date">2023 – 2024</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Operated Kubernetes environments with Prometheus and Grafana for reliability and observability.</li>
-              <li>Automated monitoring and telemetry pipelines with Python for performance diagnostics.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="project-list">
-          <article class="project-card">
-            <h3>Metahuman Conversational Platform</h3>
-            <p class="project-meta">React · TypeScript · Streaming AI</p>
-            <ul class="project-bullets">
-              <li>Built a real-time AI avatar system generating human-like video responses from text prompts.</li>
-              <li>Implemented low-latency token streaming and sentence-level buffering for smooth generation.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <h3>Property Management Operations System</h3>
-            <p class="project-meta">Flask · React · PostgreSQL</p>
-            <ul class="project-bullets">
-              <li>Developed a multi-property ticketing platform for maintenance workflows and service operations.</li>
-              <li>Added role-based access, live dashboard views, and reporting tools for operators and management.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <h3>Observability Monitoring Service</h3>
-            <p class="project-meta">Python · Bash · Kubernetes · Ceph</p>
-            <ul class="project-bullets">
-              <li>Created periodic collectors for CPU, memory, storage, networking, and cluster health metrics.</li>
-              <li>Standardized JSON telemetry output for downstream analysis and anomaly tracking.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="interests" class="section adityakiwi">
-      <div class="container">
-        <h2 class="section-title">Interests</h2>
-        <p class="adityakiwi-intro">I am most interested in product-oriented engineering problems where software, infrastructure, and AI meet.</p>
-        <div class="adityakiwi-topics">
-          <div class="topic-tags">
-            <span>AI developer tooling</span>
-            <span>LLM product workflows</span>
-            <span>MLOps and platform reliability</span>
-            <span>Data-intensive web applications</span>
-            <span>Cloud-native architectures</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-text">Open to software engineering, ML engineering, and product-focused technical collaborations.</p>
-        <div class="contact-main">
-          <a href="https://linkedin.com/in/adidix" target="_blank" rel="noopener" class="contact-item">linkedin.com/in/adidix</a>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:connect@aditya.kiwi">connect@aditya.kiwi</a>
-          <a href="/resume.html">Resume</a>
-          <a href="https://adityadixit.com" target="_blank" rel="noopener">adityadixit.com</a>
-          <a href="https://aditya.kiwi" target="_blank" rel="noopener">aditya.kiwi</a>
-        </div>
-      </div>
-    </section>
+    <section class="contact-section" id="contact"><div class="section-wrap contact-inner"><div><p class="eyebrow">Get in touch</p><h2>Let’s find a time to talk.</h2><p>For software engineering, clinical AI, and product-focused conversations.</p></div><div class="contact-actions"><a class="button button-light" href="https://calendly.com/adidix/30min" target="_blank" rel="noopener">Schedule a meeting <span aria-hidden="true">↗</span></a><a class="contact-secondary" href="https://adityadixit.com/contact/" target="_blank" rel="noopener">Send me a message <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Aditya Dixit · aditya.kiwi · Served on Cloudflare</p>
-    </div>
-  </footer>
-
+  <footer class="site-footer"><div class="section-wrap footer-inner"><a class="wordmark" href="#top">Aditya Dixit</a><p>© <span id="year"></span> Aditya Dixit</p><a href="/resume.html">Resume <span aria-hidden="true">↗</span></a></div></footer>
   <script src="main.js"></script>
 </body>
 </html>

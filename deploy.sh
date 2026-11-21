@@ -10,4 +10,4 @@ git status
 git commit -m "$MSG"
 git push origin main
 
-echo "\n✓ Pushed to main. Site will update at https://adityakiwi.github.io"
+printf '\n✓ Pushed to main. Site will update at https://adityakiwi.com\n'

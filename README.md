@@ -1,17 +1,11 @@
-# aditya.kiwi
+# Aditya Dixit
 
-Personal developer one-pager for Aditya Dixit.
+Technology-focused professional profile with a persistent light/dark theme, responsive navigation, selected work, experience, skills, education, a Google Docs resume embed, and contact links.
 
 ## Deployment
 
-This site is deployed via Cloudflare for `https://aditya.kiwi`.
-
-### Update flow
+The static site is published from `main` to GitHub Pages at [adityakiwi.com](https://adityakiwi.com). It has no build step or package dependencies.
 
 ```bash
-git add -A
-git commit -m "Update site"
-git push origin main
+./deploy.sh "Update profile site"
 ```
-
-After pushing, Cloudflare picks up the latest build based on your project configuration.
