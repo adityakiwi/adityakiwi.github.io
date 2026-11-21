@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f5f8fc" />
-  <meta name="description" content="Aditya Dixit is a software engineer building dependable software and clinical AI systems." />
-  <title>Aditya Dixit — Software Engineer</title>
+  <meta name="description" content="Aditya Dixit builds clinical AI systems where reliability and privacy are properties the software proves, not assumptions people remember." />
+  <title>Aditya Dixit — Clinical AI Systems</title>
   <script>try{const t=localStorage.getItem('site-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -27,6 +27,7 @@
         <p class="eyebrow"><span class="status-dot"></span> Software engineer · Healthcare AI</p>
         <h1>I build software for <em>complex, consequential</em> work.</h1>
         <p class="intro-lede">Five years across infrastructure, platform engineering, full-stack products, and agentic AI. Today, I turn clinical workflows and research needs into dependable software.</p>
+        <p class="intro-thesis">In clinical software, reliability and privacy should be properties the system proves — not assumptions people have to remember.</p>
         <div class="intro-actions"><a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↓</span></a><a class="text-link" href="/resume.html">View resume <span aria-hidden="true">↗</span></a><a class="text-link" href="https://adityadixit.com" target="_blank" rel="noopener">More about me <span aria-hidden="true">↗</span></a></div>
       </div>
       <aside class="intro-note" aria-label="Career path">
@@ -39,7 +40,7 @@
     <section class="section-wrap section-block" id="work">
       <header class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2>Software built around real workflows.</h2></div><p class="section-summary">A small sample of clinical and research systems, described by what they do and how they are engineered.</p></header>
       <div class="work-grid">
-        <article class="work-card work-featured"><div class="card-top"><span class="card-index">01</span><span class="card-type">Clinical decision support</span></div><h3>Pre-screening &amp; risk assessment</h3><p>A cancer pre-screening tool that combines published clinical guidelines with fitted statistical models to assess patients and return recommendations and risk tiers.</p><ul class="detail-list"><li>One shared prediction engine across web, iOS, Android tablet, desktop, kiosk, and admin clients.</li><li>Multi-stage screening, risk stratification, and imaging-informed decisions.</li><li>13 languages, offline capability, and accessibility review.</li></ul><div class="card-footer"><span>Cross-platform</span><span>Offline-ready</span><span>Localized</span></div></article>
+        <article class="work-card work-featured"><div class="card-top"><span class="card-index">01</span><span class="card-type">Clinical decision support</span></div><h3>Pre-screening &amp; risk assessment</h3><p>A cancer pre-screening tool that combines published clinical guidelines with fitted statistical models to assess patients and return recommendations and risk tiers.</p><ul class="detail-list"><li>One shared prediction engine across web, iOS, Android tablet, desktop, kiosk, and admin clients.</li><li>Risk prevented: built as one shared engine rather than a reimplementation per platform, so no surface can diverge from another on the same patient.</li><li>Multi-stage screening, risk stratification, and imaging-informed decisions.</li><li>13 languages, offline capability, and accessibility review.</li></ul><div class="card-footer"><span>Cross-platform</span><span>Offline-ready</span><span>Localized</span></div></article>
         <article class="work-card"><div class="card-top"><span class="card-index">02</span><span class="card-type">Clinical planning</span></div><h3>Surgical planning platform</h3><p>An interactive pre-operative planning tool that turns clinical data and imaging-derived variables into patient-specific insights.</p><ul class="detail-list"><li>3D visualization with data overlays and predictive outputs.</li><li>Printable operative summaries and a signed, auto-updating offline desktop build.</li></ul><div class="card-footer"><span>3D visualization</span><span>Desktop</span></div></article>
         <article class="work-card"><div class="card-top"><span class="card-index">03</span><span class="card-type">Longitudinal care</span></div><h3>Clinical monitoring platform</h3><p>A care pathway that helps patients and clinicians follow change over time and stay aligned with a protocol.</p><ul class="detail-list"><li>Trend tracking, derived kinetics from serial labs, adherence, and scheduling.</li><li>AI chat limited to approved content, with topic and intent gates that abstain on unsafe requests.</li></ul><div class="card-footer"><span>Clinician + patient views</span><span>Guarded AI</span></div></article>
         <article class="work-card"><div class="card-top"><span class="card-index">04</span><span class="card-type">Research infrastructure</span></div><h3>Consent-aware data systems</h3><p>HIPAA-conscious pipelines move consented study data from point-of-care capture into institutional research systems.</p><ul class="detail-list"><li>De-identification, consent gating, audit trails, and admin reconciliation.</li><li>Public education builds are architecturally separate and verified not to collect or transmit input.</li></ul><div class="card-footer"><span>Privacy by design</span><span>Research systems</span></div></article>
@@ -49,10 +50,8 @@
 
     <section class="approach-section" id="approach"><div class="section-wrap section-block"><header class="section-heading"><div><p class="eyebrow">02 / Engineering approach</p><h2>Make the guarantees testable.</h2></div><p class="section-summary">In clinical software, reliability and privacy should be properties the system proves—not assumptions people have to remember.</p></header>
       <div class="approach-grid">
-        <article class="principle"><span class="principle-number">A</span><div><h3>One engine, many clients</h3><p>Shared decision logic prevents separate apps from disagreeing. Conformance vectors and cross-implementation regression tests catch drift in ported copies.</p></div></article>
-        <article class="principle"><span class="principle-number">B</span><div><h3>Reproducible results</h3><p>Versioned engine and guideline identifiers make each stored result traceable to the logic that produced it.</p></div></article>
-        <article class="principle"><span class="principle-number">C</span><div><h3>Privacy that is verified</h3><p>For public builds that must never retain or send input, bundle scans check storage and network APIs; runtime assertions check for zero calls, with a canary test that proves the guard works.</p></div></article>
-        <article class="principle"><span class="principle-number">D</span><div><h3>Security through the lifecycle</h3><p>PHI separation, consent gates, server-side secrets, SSO, bot mitigation, continuous security scanning, end-to-end tests, and WCAG AA contrast checks.</p></div></article>
+        <article class="principle"><span class="principle-number">A</span><div><h3>Reproducible results</h3><p>Versioned engine and guideline identifiers, so a stored result stays reproducible after the model moves on.</p></div></article>
+        <article class="principle"><span class="principle-number">B</span><div><h3>Privacy that is verified</h3><p>A public build that must never store or transmit input is verified by test, not by convention.</p></div></article>
       </div>
       <div class="scale-strip"><p>Clinical work, roughly one year</p><div><strong>19</strong><span>production deployments</span></div><div><strong>5</strong><span>client platforms</span></div><div><strong>13</strong><span>locales</span></div><div><strong>30</strong><span>signed desktop releases</span></div></div>
     </div></section>
